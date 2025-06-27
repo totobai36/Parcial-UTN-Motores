@@ -8,6 +8,11 @@ public class Torch : MonoBehaviour
     public bool isLit = false;
     public GameObject flameEffect;
 
+    void Start()
+    {
+        flameEffect.SetActive(isLit); // sincroniza estado inicial
+    }
+
     public void Toggle()
     {
         isLit = !isLit;
